@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 
+import Image from 'next/image';
 import styles from '../styles';
 import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
 import { StartSteps, TitleText, TypingText } from '../components';
@@ -20,8 +21,11 @@ const GetStarted = () => (
         variants={planetVariants('left')}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
-          src="/get-started.png"
+        <Image
+          src="/get-started.webp"
+          width={1000}
+          height={1000}
+          quality={100}
           alt="get-started"
           className="w-[90%] h-[90%] object-contain"
         />

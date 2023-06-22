@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 
+import Image from 'next/image';
 import styles from '../styles';
 import { fadeIn, staggerContainer, zoomIn } from '../utils/motion';
 
@@ -37,17 +38,22 @@ const Feedback = () => (
         variants={fadeIn('left', 'tween', 0.2, 1)}
         className="relative flex flex-1 justify-center items-center"
       >
-        <img
-          src="/planet-09.png"
+        <Image
+          src="/planet-09.webp"
           alt="planet-09"
+          width={1000}
+          height={1000}
+          quality={100}
           className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
         />
         <motion.div
           variants={zoomIn(0.4, 1)}
           className="lg:block hidden absolute -left-[10%] top-[3%]"
         >
-          <img
-            src="/stamp.png"
+          <Image
+            src="/stamp.webp"
+            width={200}
+            height={200}
             alt="stamp"
             className="w-[155px] h-[155px] object-contain"
           />
